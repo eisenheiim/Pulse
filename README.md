@@ -1,4 +1,5 @@
-# Pulse Landing
+# Pulse
+
 
 Public portfolio site for **Pulse** — AI Revenue Ops Copilot.
 
