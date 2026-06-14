@@ -35,7 +35,7 @@ The product is built around a simple principle: **automation should remove repet
   <img src="./PulseDemo.gif" alt="Pulse demo — meeting notes mapped to HubSpot fields" width="900" />
 </p>
 
-Full video: [PulseDemo.mp4](./PulseDemo.mp4)
+Full video: [PulseDemo.mp4](./public/PulseDemo.mp4)
 
 ---
 
