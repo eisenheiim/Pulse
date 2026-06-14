@@ -1,6 +1,12 @@
-# Pulse
+<h1 align="center">Pulse</h1>
 
-**AI Revenue Ops Copilot** — automates the work between sales calls and your CRM.
+<p align="center">
+  <img src="public/pulse-logo.png" alt="Pulse logo" width="88" />
+</p>
+
+<p align="center">
+  <strong>AI Revenue Ops Copilot</strong> — automates the work between sales calls and your CRM.
+</p>
 
 Reps spend hours every week retyping meeting notes into HubSpot, drafting follow-ups, and chasing pipeline updates. That admin work is invisible, but it directly slows deals: fields go stale, next steps get missed, and RevOps can't trust the data they report on.
 
