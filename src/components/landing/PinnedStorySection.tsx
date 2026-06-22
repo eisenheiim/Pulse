@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { GITHUB_REPO_URL } from '../../lib/site';
+import { BOOK_DEMO_EMAIL } from '../../lib/site';
 import { WORD_STAT } from './data';
 
 const PANEL_COUNT = 3;
@@ -22,21 +21,6 @@ const PANELS: Panel[] = [
     title: "The world's sales teams need a CRM that keeps up.",
     subtitle:
       'Pulse learns your HubSpot schema and maps meeting notes to the right deal fields — custom properties, stages, and lifecycle — with your approval.',
-    actions: (
-      <>
-        <a href="#demo" className="scale-btn-primary px-8 py-3">
-          Try the demo
-        </a>
-        <a
-          href={GITHUB_REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="scale-btn-outline px-8 py-3"
-        >
-          View on GitHub
-        </a>
-      </>
-    ),
   },
   {
     id: 'platform',
@@ -45,19 +29,9 @@ const PANELS: Panel[] = [
     subtitle:
       'Pulse is the AI copilot for sales and RevOps teams — built to turn meeting notes into CRM updates, follow-ups, and pipeline intelligence you can trust.',
     actions: (
-      <>
-        <a href="#demo" className="scale-btn-primary">
-          See the demo
-        </a>
-        <a
-          href={GITHUB_REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="scale-btn-outline"
-        >
-          GitHub
-        </a>
-      </>
+      <a href="#demo" className="scale-btn-primary px-8 py-3">
+        See how it works
+      </a>
     ),
   },
   {
@@ -67,8 +41,11 @@ const PANELS: Panel[] = [
     subtitle:
       'From meeting notes to HubSpot deals, Gmail follow-ups, and Slack summaries — Pulse handles the workflow your team keeps putting off.',
     actions: (
-      <a href="#demo" className="scale-btn-outline inline-flex">
-        See how it works <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
+      <a
+        href={`mailto:${BOOK_DEMO_EMAIL}?subject=Pulse%20Demo%20Request`}
+        className="scale-btn-primary px-8 py-3"
+      >
+        Book demo
       </a>
     ),
   },
@@ -198,12 +175,6 @@ export default function PinnedStorySection() {
             style={{ height: `${Math.max(8, progress * 100)}%` }}
           />
         </div>
-
-        {activeIndex < PANEL_COUNT - 1 && (
-          <div className="absolute bottom-8 right-6 z-20 hidden animate-pulse text-xs text-zinc-500 md:block lg:right-10">
-            Scroll
-          </div>
-        )}
       </div>
     </div>
   );

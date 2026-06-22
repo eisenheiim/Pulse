@@ -16,8 +16,8 @@ export default function Landing() {
       <main>
         <PinnedStorySection />
         <MarqueeTicker />
-        <PillarsSection />
         <DemoSection />
+        <PillarsSection />
         <SecuritySection />
         <FAQSection />
         <FinalCTASection />

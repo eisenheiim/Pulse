@@ -5,7 +5,7 @@ import PulseLogo from '../PulseLogo';
 import { GITHUB_REPO_URL } from '../../lib/site';
 
 const NAV = [
-  { label: 'Demo', href: '#demo' },
+  { label: 'Product', href: '#demo' },
   { label: 'Security', href: '#security' },
   { label: 'FAQ', href: '#faq' },
 ];
@@ -26,14 +26,16 @@ export default function LandingHeader() {
           <span className="text-2xl font-bold tracking-tight text-black">Pulse</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {NAV.map(({ label, href }) => (
             <a
               key={href}
               href={href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-black"
+              className="nav-link group relative text-base font-semibold tracking-wide text-zinc-700 transition-colors duration-300 hover:text-black"
             >
-              {label}
+              <span className="relative z-10">{label}</span>
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-black transition-all duration-300 ease-out group-hover:w-full" />
+              <span className="absolute inset-0 -z-0 scale-75 rounded-lg bg-zinc-100 opacity-0 blur-sm transition-all duration-300 group-hover:scale-100 group-hover:opacity-100" />
             </a>
           ))}
         </nav>
@@ -64,7 +66,12 @@ export default function LandingHeader() {
       {mobileOpen && (
         <div className="border-t border-zinc-100 bg-white px-6 py-4 md:hidden">
           {NAV.map(({ label, href }) => (
-            <a key={href} href={href} className="block py-2 text-sm font-medium text-zinc-700" onClick={() => setMobileOpen(false)}>
+            <a
+              key={href}
+              href={href}
+              className="block py-3 text-base font-semibold tracking-wide text-zinc-800 transition-colors hover:text-black"
+              onClick={() => setMobileOpen(false)}
+            >
               {label}
             </a>
           ))}
